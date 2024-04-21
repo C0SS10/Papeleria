@@ -8,10 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        pistachio: {
+          50: '#b7efc5ff',
+          100: '#92e6a7ff',
+          200: '#6ede8aff',
+          300: '#4ad66dff',
+          400: '#2dc653ff',
+          500: '#25a244ff',
+          600: '#208b3aff',
+          700: '#1a7431ff',
+          800: '#155d27ff',
+          900: '#10451dff',
+        },
       },
     },
   },
