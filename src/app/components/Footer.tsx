@@ -2,43 +2,7 @@ import Link from "next/link";
 import { FooterList } from "./FooterList";
 import { Section } from "./Section";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-
-interface ListType {
-  text: string;
-  href?: string;
-}
-
-const contactList: ListType[] = [
-  { text: "Teléfono oficina: (601) 364 9000" },
-  { text: "Servicio al cliente: (601) 364 9333" },
-  { text: "Tiendavirtual@panamericana.com.co", href: "mailto:" },
-  { text: "Servicliente@panamericana.com.co", href: "mailto:" },
-  { text: "Calle 12 #34-30, Bogotá D.C." },
-];
-
-const aboutList: ListType[] = [
-  { text: "¿Quiénes somos?", href: "/quienes-somos" },
-  {
-    text: "Trabaja con nosotros",
-    href: "https://www.panamericana.com.co/links-interes/trabaje-con-nosotros",
-  },
-  {
-    text: "Centro Cultural",
-    href: "https://www.panamericana.com.co/centro-cultural-y-empresarial",
-  },
-  {
-    text: "Nuestras tiendas",
-    href: "https://www.panamericana.com.co/nuestras-tiendas",
-  },
-];
-
-const policiesList: ListType[] = [
-  { text: "Tratamiendo de datos", href: "/habeas-data" },
-  { text: "Aviso de privacidad" },
-  { text: "Políticas de devolución", href: "/politicas-de-devolucion" },
-  { text: "Política de cookies" },
-  { text: "SIC", href: "https://www.sic.gov.co/" },
-];
+import { contactList, aboutList, policiesList } from "@/app/constants/footerConstants";
 
 export default function Footer() {
   return (
