@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { FooterList } from "./FooterList";
-import { Section } from "./Section";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FooterList } from "@/app/components/FooterList";
+import { Section } from "@/app/components/Section";
 import { contactList, aboutList, policiesList } from "@/app/constants/footerConstants";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -101,6 +101,7 @@ export default function Footer() {
             </div>
           </FooterList>
         </div>
+        <p className="text-center text-sm">©️ Página hecha por: Esteban Cossio Gonzalez | Fundamentos de Sistemas | UdeA</p>
       </Section>
     </footer>
   );
