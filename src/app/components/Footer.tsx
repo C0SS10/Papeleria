@@ -8,13 +8,13 @@ export default function Footer() {
   return (
     <footer className="bg-pistachio-400 text-slate-100 text-md mt-8 shadow-md border-pistachio-900 border-t-2">
       <Section>
-        <div className="flex flex-col md:flex-row justify-between pt-4 pb-4">
+        <div className="flex flex-col md:flex-row justify-between pt-4 pb-4 sm:flex-row sm:gap-2 md:gap-10">
           <FooterList>
             <h3 className="text-pistachio-200 text-lg font-extrabold mb-2">
               CONTÁCTENOS
             </h3>
             {contactList.map((item, index) => (
-              <>
+              <div key={index}>
                 {item.href ? (
                   <a
                     key={index}
@@ -28,7 +28,7 @@ export default function Footer() {
                     {item.text}
                   </p>
                 )}
-              </>
+              </div>
             ))}
           </FooterList>
           <FooterList>
@@ -52,7 +52,7 @@ export default function Footer() {
               POLÍTICAS
             </h3>
             {policiesList.map((item, index) => (
-              <>
+              <div key={index}>
                 {item.href ? (
                   <Link
                     key={index}
@@ -66,7 +66,7 @@ export default function Footer() {
                     {item.text}
                   </p>
                 )}
-              </>
+              </div>
             ))}
           </FooterList>
           <FooterList>
