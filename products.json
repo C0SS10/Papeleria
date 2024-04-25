@@ -1,0 +1,394 @@
+{
+  "products": [
+    {
+      "title": "Teclado + Mouse + Auriculares",
+      "description": "Combo de perifericos gaming",
+      "price": 299900,
+      "discountPercentage": 44,
+      "stock": 5,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/514395-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/514395-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/514397-1200-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/514398-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/526084-800-auto"
+      ]
+    },
+    {
+      "title": "Monitor HP  V22V G5 FHD DE 21.45''",
+      "description": "Equipa tu computador con la última tecnología en monitores",
+      "price": 399000,
+      "discountPercentage": 44,
+      "stock": 10,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/483262-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/483262-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/483265-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/483266-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/483264-800-auto"
+      ]
+    },
+    {
+      "title": "Tableta Lenovo M9",
+      "description": "Última técnología en tableta modelo: ZAC30086CO, 9'', RAM 4 GB, 128 GB, HD, AZUL",
+      "price": 579000,
+      "discountPercentage": 44,
+      "stock": 5,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/520636-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/520636-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/520639-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/520642-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Impresora multifuncional HP",
+      "description": "Impresora HP Smart Tank 520 todo en uno, que ofrece la calidad HP que tú esperas y ahorros sorprendentes",
+      "price": 749000,
+      "discountPercentage": 44,
+      "stock": 4,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/531486-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/531486-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/531488-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/531489-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/531490-800-auto"
+      ]
+    },
+    {
+      "title": "Control inalamabrico para PS5",
+      "description": "Control inalámbrico DualSense blanco para PS5 + juego EA Sports FC 24",
+      "price": 449900,
+      "discountPercentage": 44,
+      "stock": 4,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/519918-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/519918-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/521410-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/521411-800-auto"
+      ]
+    },
+    {
+      "title": "Smartwatch M9023",
+      "description": "Reloj inteligente con forma ultra delgada",
+      "price": 169900,
+      "discountPercentage": 44,
+      "stock": 12,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/513659-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/513659-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/513660-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/513661-800-auto"
+      ]
+    },
+    {
+      "title": "Portátil ASUS TUF Gaming",
+      "description": "Portátil gaming para que juegues como todo un profesional.",
+      "price": 5199900,
+      "discountPercentage": 44,
+      "stock": 2,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/521389-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/521389-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/521390-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/521392-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/521393-800-auto"
+      ]
+    },
+    {
+      "title": "Mini ventilador",
+      "description": "Pequeño ventilador portátil USB",
+      "price": 49900,
+      "discountPercentage": 44,
+      "stock": 20,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/535868-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/535868-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/535869-800-auto"
+      ]
+    },
+    {
+      "title": "Los vagabundos de dios",
+      "description": "Gran variedad de libros de la mejor calidad",
+      "price": 69000,
+      "discountPercentage": 44,
+      "stock": 5,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/537921-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/537921-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/537930-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/537935-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/537936-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    },
+    {
+      "title": "Altavoz Velikka",
+      "description": "Gran variedad en sistemas de sonido y reproductores de audio",
+      "price": 27900,
+      "discountPercentage": 44,
+      "stock": 8,
+      "category": "electronicos",
+      "thumbnail": "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+      "images": [
+        "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
+        "https://panamericana.vtexassets.com/arquivos/ids/471974-800-auto"
+      ]
+    }
+  ]
+}
