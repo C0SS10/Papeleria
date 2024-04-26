@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Section } from "./Section";
+import { Section } from "../Section";
 import Logo from "@/app/icons/HomeIcon";
 
 export default function Navbar() {

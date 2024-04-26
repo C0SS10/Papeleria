@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FooterList } from "@/app/components/FooterList";
+import { FooterList } from "@/app/components/footer/FooterList";
 import { Section } from "@/app/components/Section";
 import { contactList, aboutList, policiesList } from "@/app/constants/footerConstants";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
