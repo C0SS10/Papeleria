@@ -1,6 +1,11 @@
-export const truncateText = (text: string) => {
-  if (text.length < 30) {
+export const truncateText = (text: string | undefined) => {
+  if (!text) {
+    return "";
+  }
+
+  if (text.length < 25) {
     return text;
   }
-  return text.substring(0, 30) + "...";
+  
+  return text.substring(0, 25) + "...";
 };
