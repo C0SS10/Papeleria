@@ -1,13 +1,21 @@
+"use client";
+
 import React from "react";
 import { ProductCardProps } from "@/app/types/productTypes";
 import { truncateText } from "@/app/utils/truncateText";
 import { formatPrice } from "@/app/utils/formatPrice";
 import Image from "next/image";
 import PlusCartIcon from "@/app/icons/PlusCartIcon";
+import { useRouter } from "next/navigation";
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const router = useRouter();
+
   return (
-    <article className="bg-white col-span-1 rounded-md border-4 border-pistachio-400 border-t-pistachio-600 border-r-pistachio-600 border-b-pistachio-400 border-l-pistachio-400 transition-transform hover:scale-105 text-center ease-in-out mt-2 shadow-lg">
+    <article
+      className="bg-white col-span-1 rounded-md border-4 border-pistachio-400 border-t-pistachio-600 border-r-pistachio-600 border-b-pistachio-400 border-l-pistachio-400 transition-transform hover:scale-105 text-center ease-in-out mt-2 shadow-lg cursor-pointer"
+      onClick={() => router.push(`/product/${product.id}`)}
+    >
       <div className="flex flex-col items-center w-full gap-2">
         <div className="aspect-square overflow-hidden relative w-full">
           <Image
