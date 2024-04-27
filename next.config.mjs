@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['panamericana.vtexassets.com']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'panamericana.vtexassets.com'
+      }
+    ]
   }
 };
 
