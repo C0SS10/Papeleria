@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCart } from "@/app/hooks/useCart";
 import { MdArrowBack } from "react-icons/md";
 import ItemContent from "./ItemContent";
+import { FaShoppingCart } from "react-icons/fa";
 
 const CartClient = () => {
   const { cartProducts } = useCart();
@@ -28,7 +29,9 @@ const CartClient = () => {
   }
   return (
     <div>
-      <h1 className="text-4xl text-center font-bold">Carrito de la compra</h1>
+      <p className="flex flex-col items-center text-center text-pistachio-400 font-bold">
+        <FaShoppingCart className="text-6xl border-2 border-pistachio-400 p-1 rounded-md shadow-[2px_2px] shadow-yellow-400" />
+      </p>
       <section className="grid grid-cols-5 text-lg font-bold gap-4 pb-2 items-center mt-4">
         <div className="col-span-2 justify-self-start">PRODUCTO</div>
         <div className="justify-self-center">PRECIO</div>
@@ -38,9 +41,7 @@ const CartClient = () => {
       <section>
         {cartProducts &&
           cartProducts.map((item) => {
-            return (
-              <ItemContent key={item.id} item={item}/>
-            );
+            return <ItemContent key={item.id} item={item} />;
           })}
       </section>
       <section className="border-t-2 border-pistachio-400 py-2 flex justify-between gap-2">
