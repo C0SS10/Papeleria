@@ -4,6 +4,7 @@ import "./globals.css";
 import Head from "next/head";
 import Navbar from "./components/landing/Navbar";
 import Footer from "./components/footer/Footer";
+import CartProvider from "./providers/CartProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +24,13 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/public/favicon.ico" />
       </Head>
       <body className={`${inter.className} text-slate-900`}>
-        <main className="flex flex-col min-h-screen">
-          <Navbar />
-          <div className="flex-grow">{children}</div>
-          <Footer />
-        </main>
+        <CartProvider>
+          <main className="flex flex-col min-h-screen">
+            <Navbar />
+            <div className="flex-grow">{children}</div>
+            <Footer />
+          </main>
+        </CartProvider>
       </body>
     </html>
   );

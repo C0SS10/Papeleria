@@ -1,18 +1,23 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import MoneyIcon from "@/app/icons/MoneyIcon";
 import PlusCartIcon from "@/app/icons/PlusCartIcon";
 import { formatPrice } from "@/app/utils/formatPrice";
-import { CartProductType} from "@/app/types/productTypes";
+import { CartProductType } from "@/app/types/productTypes";
 import { ProductQuantity } from "@/app/components/product/ProductQuantity";
 import { ProductImages } from "@/app/components/product/ProductImages";
+import { useCart } from "@/app/hooks/useCart";
+import { MdCheckCircle } from "react-icons/md";
 
 interface ProductDetailsProps {
   product: any;
 }
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
+  const { handleAddProduct, cartProducts } = useCart();
+  const [isProductInCart, setIsProductInCart] = useState<boolean>(false);
+
   const [cartProduct, setCartProduct] = useState<CartProductType>({
     id: product.id,
     title: product.title,
@@ -25,6 +30,19 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     thumbnail: product.thumbnail,
     images: product.images,
   });
+
+  useEffect(() => {
+    setIsProductInCart(false);
+
+    if (cartProduct) {
+      const existingIndex = cartProducts?.findIndex(
+        (item) => item.id === product.id
+      );
+      if (existingIndex !== undefined && existingIndex > -1) {
+        setIsProductInCart(true);
+      }
+    }
+  }, [cartProducts, cartProduct, product.id]);
 
   const quantityIncrease = useCallback(() => {
     setCartProduct((prev) => {
@@ -99,10 +117,26 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             <MoneyIcon />
             Comprar ahora
           </button>
-          <button className="flex flex-row gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md">
-            <PlusCartIcon />
-            Agregar al carrito
-          </button>
+          {isProductInCart ? (
+            <>
+              <p className="mb-2 text-slate-600 flex items-center gap-1">
+                <MdCheckCircle className="text-pistachio-400" size={20}/>
+                <span>El producto está en el carrito</span>
+              </p>
+            </>
+          ) : (
+            <>
+              <button
+                className="flex flex-row gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md"
+                onClick={() => {
+                  handleAddProduct(cartProduct);
+                }}
+              >
+                <PlusCartIcon />
+                Agregar al carrito
+              </button>
+            </>
+          )}
         </div>
       </div>
     </div>

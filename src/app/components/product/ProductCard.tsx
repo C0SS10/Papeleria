@@ -20,6 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="aspect-square overflow-hidden relative w-full">
           <Image
             fill
+            sizes="100%"
             src={product.thumbnail}
             className="w-full h-full object-contain"
             alt={product.title}

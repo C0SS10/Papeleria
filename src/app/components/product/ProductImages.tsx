@@ -26,9 +26,10 @@ export const ProductImages: React.FC<ProductImagesProps> = ({
     <div className="grid grid-cols-6 gap-2 h-full max-h-[600px] min-h-[400px] sm:min-h-[500px] mt-6">
       <div className="flex flex-col items-center justify-center gap-4 cursor-pointer h-full max-h-[400px] min-h-[200px] sm:min-h-[300px]">
         {product.images.map((image: string, index: number) => {
+          const randomID = Math.random().toString(4);
           return (
             <div
-              key={product.id}
+              key={randomID}
               onClick={() => handleSelectImage(image, index)}
               className={`relative w-[100%] aspect-square rounded-sm border-pistachio-400 ${
                 selectedImageIndex === index ? "border-2" : "border-none"
@@ -49,6 +50,7 @@ export const ProductImages: React.FC<ProductImagesProps> = ({
       <div className="col-span-5 relative aspect-square">
         <Image
           fill
+          sizes="100%"
           src={cartProduct.images[selectedImageIndex]}
           alt={cartProduct.title}
           className="object-contain max-h-[500px] min-h-[300px] sm:min-h-[400px] "
