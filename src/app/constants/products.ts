@@ -6,6 +6,7 @@ export const products = [
     price: 299900,
     discountPercentage: 44,
     stock: 5,
+    maxStock: 8,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/514395-800-auto",
@@ -23,6 +24,7 @@ export const products = [
     price: 399000,
     discountPercentage: 44,
     stock: 10,
+    maxStock: 10,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/483262-800-auto",
@@ -41,6 +43,7 @@ export const products = [
     price: 579000,
     discountPercentage: 44,
     stock: 5,
+    maxStock: 6,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/520636-800-auto",
@@ -57,6 +60,7 @@ export const products = [
     price: 27900,
     discountPercentage: 44,
     stock: 8,
+    maxStock: 9,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/471973-800-auto",
@@ -73,6 +77,7 @@ export const products = [
     price: 749000,
     discountPercentage: 44,
     stock: 4,
+    maxStock: 5,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/531486-800-auto",
@@ -91,6 +96,7 @@ export const products = [
     price: 449900,
     discountPercentage: 44,
     stock: 4,
+    maxStock: 6,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/519918-800-auto",
@@ -107,6 +113,7 @@ export const products = [
     price: 169900,
     discountPercentage: 44,
     stock: 12,
+    maxStock: 15,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/513659-800-auto",
@@ -123,6 +130,7 @@ export const products = [
     price: 5199900,
     discountPercentage: 44,
     stock: 2,
+    maxStock: 4,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/521389-800-auto",
@@ -140,6 +148,7 @@ export const products = [
     price: 49900,
     discountPercentage: 0,
     stock: 20,
+    maxStock: 22,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/535868-800-auto",
@@ -155,6 +164,7 @@ export const products = [
     price: 69000,
     discountPercentage: 10,
     stock: 5,
+    maxStock: 8,
     category: "libros",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/537921-800-auto",
@@ -172,6 +182,7 @@ export const products = [
     price: 76000,
     discountPercentage: 10,
     stock: 8,
+    maxStock: 9,
     category: "libros",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/534862-800-auto",
@@ -188,6 +199,7 @@ export const products = [
     price: 70000,
     discountPercentage: 0,
     stock: 5,
+    maxStock: 7,
     category: "libros",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/465623-800-auto",
@@ -204,6 +216,7 @@ export const products = [
     price: 42000,
     discountPercentage: 0,
     stock: 10,
+    maxStock: 12,
     category: "libros",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/477690-800-auto",
@@ -219,6 +232,7 @@ export const products = [
     price: 52900,
     discountPercentage: 0,
     stock: 2,
+    maxStock: 3,
     category: "libros",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/425001-800-auto",
@@ -237,6 +251,7 @@ export const products = [
     price: 249900,
     discountPercentage: 10,
     stock: 4,
+    maxStock: 6,
     category: "accesorios",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/469364-800-auto",
@@ -254,6 +269,7 @@ export const products = [
     price: 229400,
     discountPercentage: 15,
     stock: 3,
+    maxStock: 5,
     category: "accesorios",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/372579-800-auto",
@@ -271,6 +287,7 @@ export const products = [
     price: 79900,
     discountPercentage: 0,
     stock: 2,
+    maxStock: 3,
     category: "accesorios",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/511309-800-auto",
@@ -288,6 +305,7 @@ export const products = [
     price: 89900,
     discountPercentage: 5,
     stock: 7,
+    maxStock: 9,
     category: "accesorios",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/534317-800-auto",
@@ -305,6 +323,7 @@ export const products = [
     price: 16100,
     discountPercentage: 0,
     stock: 20,
+    maxStock: 22,
     category: "arte",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/266422-800-auto",
@@ -319,6 +338,7 @@ export const products = [
     price: 24400,
     discountPercentage: 30,
     stock: 10,
+    maxStock: 13,
     category: "arte",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/444132-800-auto",
@@ -335,6 +355,7 @@ export const products = [
     price: 142900,
     discountPercentage: 0,
     stock: 5,
+    maxStock: 9,
     category: "arte",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/373474-800-auto",
@@ -351,6 +372,7 @@ export const products = [
     price: 27200,
     discountPercentage: 30,
     stock: 12,
+    maxStock: 14,
     category: "arte",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/356883-800-auto",
@@ -366,6 +388,7 @@ export const products = [
     price: 559300,
     discountPercentage: 30,
     stock: 10,
+    maxStock: 14,
     category: "muebles",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/326719-800-auto",
@@ -381,6 +404,7 @@ export const products = [
     price: 209300,
     discountPercentage: 30,
     stock: 8,
+    maxStock: 9,
     category: "muebles",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/428741-800-auto",
@@ -397,6 +421,7 @@ export const products = [
     price: 549900,
     discountPercentage: 0,
     stock: 4,
+    maxStock: 5,
     category: "muebles",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/399649-800-auto",
@@ -414,6 +439,7 @@ export const products = [
     price: 288400,
     discountPercentage: 10,
     stock: 15,
+    maxStock: 15,
     category: "muebles",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/428114-800-auto",
@@ -432,6 +458,7 @@ export const products = [
     price: 90300,
     discountPercentage: 44,
     stock: 8,
+    maxStock: 9,
     category: "muebles",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/431816-800-auto",
@@ -448,6 +475,7 @@ export const products = [
     price: 199900,
     discountPercentage: 45,
     stock: 12,
+    maxStock: 13,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/377452-800-auto",
@@ -464,6 +492,7 @@ export const products = [
     price: 439000,
     discountPercentage: 37,
     stock: 3,
+    maxStock: 4,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/527066-800-auto",
