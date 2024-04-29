@@ -13,8 +13,7 @@ interface ItemContentProps {
 }
 
 const ItemContent: React.FC<ItemContentProps> = ({ item }) => {
-  const {removeProduct} = useCart();
-
+  const {removeProduct, quantityIncrease, quantityDecrease} = useCart();
 
   return (
     <section className="grid grid-cols-5 text-xs md:text-sm gap-4 border-2 border-slate-200 py-2 items-center">
@@ -50,8 +49,8 @@ const ItemContent: React.FC<ItemContentProps> = ({ item }) => {
         <ProductQuantity
           cartCounter={true}
           cartProduct={item}
-          quantityIncrease={() => {}}
-          quantityDecrease={() => {}}
+          quantityIncrease={() => {quantityIncrease(item)}}
+          quantityDecrease={() => {quantityDecrease(item)}}
         />
       </div>
       <div className="justify-self-end text-lg font-bold pr-2">

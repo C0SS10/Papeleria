@@ -7,7 +7,7 @@ import ItemContent from "./ItemContent";
 import { FaShoppingCart } from "react-icons/fa";
 
 const CartClient = () => {
-  const { cartProducts } = useCart();
+  const { cartProducts, clearCart } = useCart();
 
   if (!cartProducts || cartProducts.length === 0) {
     return (
@@ -48,7 +48,7 @@ const CartClient = () => {
         <div className="w-22">
           <button
             className="bg-pistachio-400 font-semibold p-2 shadow-md rounded-sm text-center text-sm text-slate-100 hover:bg-transparent hover:text-pistachio-400 border-2 border-pistachio-400 transition-colors ease-in"
-            onClick={() => {}}
+            onClick={() => {clearCart()}}
           >
             Limpiar carrito
           </button>

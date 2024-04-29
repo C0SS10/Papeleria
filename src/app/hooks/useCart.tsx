@@ -13,6 +13,9 @@ type ContextType = {
   cartProducts: CartProductType[] | null;
   addProduct: (product: CartProductType) => void;
   removeProduct: (product: CartProductType) => void;
+  quantityIncrease: (product: CartProductType) => void;
+  quantityDecrease: (product: CartProductType) => void;
+  clearCart: () => void;
 };
 
 export const CartContext = createContext<ContextType | null>(null);
@@ -64,9 +67,77 @@ export const CartContextProvider = (props: Props) => {
     [cartProducts]
   );
 
-  
+  const quantityIncrease = useCallback(
+    (product: CartProductType) => {
+      let updatedCart;
 
-  const value = { totalQuantity, cartProducts, addProduct, removeProduct };
+      if (product.stock + 1 > product.maxStock) {
+        return toast.error(
+          "No puedes añadir más productos de este tipo al carrito"
+        );
+      }
+
+      if (cartProducts) {
+        updatedCart = [...cartProducts];
+
+        const existingIndex = updatedCart.findIndex(
+          (item) => item.id === product.id
+        );
+
+        if (existingIndex > -1) {
+          updatedCart[existingIndex].stock = ++updatedCart[existingIndex].stock;
+        }
+
+        setCartProducts(updatedCart);
+        localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+      }
+    },
+    [cartProducts]
+  );
+
+  const quantityDecrease = useCallback(
+    (product: CartProductType) => {
+      let updatedCart;
+
+      if (product.stock <= 1) {
+        return toast.error(
+          "No puedes quitar más productos de este tipo al carrito"
+        );
+      }
+
+      if (cartProducts) {
+        updatedCart = [...cartProducts];
+
+        const existingIndex = updatedCart.findIndex(
+          (item) => item.id === product.id
+        );
+
+        if (existingIndex > -1) {
+          updatedCart[existingIndex].stock = --updatedCart[existingIndex].stock;
+        }
+
+        setCartProducts(updatedCart);
+        localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+      }
+    },
+    [cartProducts]
+  );
+
+  const clearCart = useCallback(() => {
+    setCartProducts(null);
+    setTotalQuantity(0);
+    localStorage.setItem("cartItems", JSON.stringify(null));
+  }, []);
+
+  const value = {
+    totalQuantity,
+    cartProducts,
+    addProduct,
+    removeProduct,
+    quantityIncrease,
+    quantityDecrease,
+    clearCart,
+  };
 
   return <CartContext.Provider value={value} {...props} />;
 };
