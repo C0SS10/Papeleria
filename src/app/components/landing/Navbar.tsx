@@ -13,7 +13,7 @@ export default function Navbar() {
             </Link>
             <div className="hidden md:block">Busqueda</div>
             <nav className="flex items-center gap-8 md:gap-12">
-              <div>Carrito</div>
+              <Link href={"/carrito"}>Carrito</Link>
               <div>Menu</div>
             </nav>
           </div>

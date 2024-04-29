@@ -6,12 +6,16 @@ import Link from "next/link";
 import { truncateText } from "@/app/utils/truncateText";
 import Image from "next/image";
 import { ProductQuantity } from "@/app/components/product/ProductQuantity";
+import { useCart } from "@/app/hooks/useCart";
 
 interface ItemContentProps {
   item: CartProductType;
 }
 
 const ItemContent: React.FC<ItemContentProps> = ({ item }) => {
+  const {removeProduct} = useCart();
+
+
   return (
     <section className="grid grid-cols-5 text-xs md:text-sm gap-4 border-2 border-slate-200 py-2 items-center">
       <div className="col-span-2 justify-self-start flex gap-2 md:gap-4">
@@ -32,7 +36,7 @@ const ItemContent: React.FC<ItemContentProps> = ({ item }) => {
           <div className="w-20">
             <button
               className="font-semibold p-2 shadow-md rounded-sm text-center text-sm text-pistachio-400 hover:underline"
-              onClick={() => {}}
+              onClick={() => removeProduct(item)}
             >
               Quitar
             </button>
