@@ -7,7 +7,6 @@ interface ProductParams {
 }
 
 const ProductId = ({ params }: { params: ProductParams }) => {
-  console.log("params", params);
   return (
     <article className="p-4">
       <Section>
