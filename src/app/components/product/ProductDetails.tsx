@@ -15,7 +15,7 @@ interface ProductDetailsProps {
 }
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
-  const { handleAddProduct, cartProducts } = useCart();
+  const { addProduct, cartProducts } = useCart();
   const [isProductInCart, setIsProductInCart] = useState<boolean>(false);
 
   const [cartProduct, setCartProduct] = useState<CartProductType>({
@@ -129,7 +129,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
               <button
                 className="flex flex-row gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md"
                 onClick={() => {
-                  handleAddProduct(cartProduct);
+                  addProduct(cartProduct);
                 }}
               >
                 <PlusCartIcon />
