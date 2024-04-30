@@ -37,11 +37,11 @@ export default function RootLayout({
               },
             }}
           />
-          <main className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen">
             <Navbar />
-            <div className="flex-grow">{children}</div>
+            <main className="flex-grow">{children}</main>
             <Footer />
-          </main>
+          </div>
         </CartProvider>
       </body>
     </html>
