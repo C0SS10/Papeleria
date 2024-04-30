@@ -1,7 +1,7 @@
 export default function QuienesSomos() {
-  return(
+  return (
     <div>
       <h1>Quienes somos</h1>
     </div>
-  )
+  );
 }
