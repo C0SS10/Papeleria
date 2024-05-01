@@ -1,16 +1,19 @@
 import { Section } from "@/app/components/Section";
 import { ProductDetails } from "@/app/components/product/ProductDetails";
-import { productTest } from "@/app/utils/productTest";
+import { products } from "@/app/constants/products";
 
-interface ProductParams {
-  productId?: string;
-}
+type productIdType = {
+  productId?: number;
+};
 
-const ProductId = ({ params }: { params: ProductParams }) => {
+const ProductId = ({ params }: { params: productIdType }) => {
+  const numberId = Number(params.productId);
+  const product = products.find((item) => item.id === numberId);
+
   return (
     <article className="p-4">
       <Section>
-        <ProductDetails product={productTest}/>
+        <ProductDetails product={product}/>
       </Section>
     </article>
   );
