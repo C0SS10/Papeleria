@@ -8,7 +8,8 @@ import { CartProductType } from "@/app/types/productTypes";
 import { ProductQuantity } from "@/app/components/product/ProductQuantity";
 import { ProductImages } from "@/app/components/product/ProductImages";
 import { useCart } from "@/app/hooks/useCart";
-import { MdCheckCircle } from "react-icons/md";
+import { MdArrowBack, MdCheckCircle } from "react-icons/md";
+import Link from "next/link";
 
 interface ProductDetailsProps {
   product: any;
@@ -113,21 +114,21 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           quantityDecrease={quantityDecrease}
         />
         <div className="flex flex-col gap-2 md:flex-row justify-evenly">
-          <button className="flex flex-row gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md">
+          <button className="flex flex-row items-center gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md hover:bg-transparent hover:text-pistachio-400 border-2 border-pistachio-400 transition-colors ease-in">
             <MoneyIcon />
             Comprar ahora
           </button>
           {isProductInCart ? (
             <>
-              <p className="mb-2 text-slate-600 flex items-center gap-1">
-                <MdCheckCircle className="text-pistachio-400" size={20}/>
+              <p className="mb-2 text-slate-600 flex flex-col items-center gap-1">
+                <MdCheckCircle className="text-pistachio-400" size={20} />
                 <span>El producto está en el carrito</span>
               </p>
             </>
           ) : (
             <>
               <button
-                className="flex flex-row gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md"
+                className="flex flex-row gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md hover:bg-transparent hover:text-pistachio-400 border-2 border-pistachio-400 transition-colors ease-in"
                 onClick={() => {
                   addProduct(cartProduct);
                 }}
@@ -138,6 +139,13 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             </>
           )}
         </div>
+          <Link
+            href={"/"}
+            className="text-black flex flex-col items-center gap-1 mt-2 hover:underline"
+          >
+            <MdArrowBack />
+            <span>Continuar comprando</span>
+          </Link>
       </div>
     </div>
   );
