@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Section } from "../Section";
 import Logo from "@/app/icons/HomeIcon";
+import CartCount from "./CartCount";
 
 export default function Navbar() {
   return (
@@ -13,7 +14,7 @@ export default function Navbar() {
             </Link>
             <div className="hidden md:block">Busqueda</div>
             <nav className="flex items-center gap-8 md:gap-12">
-              <Link href={"/carrito"}>Carrito</Link>
+              <CartCount />
               <div>Menu</div>
             </nav>
           </div>

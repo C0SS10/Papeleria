@@ -5,9 +5,10 @@ import { useCart } from "@/app/hooks/useCart";
 import { MdArrowBack } from "react-icons/md";
 import ItemContent from "./ItemContent";
 import { FaShoppingCart } from "react-icons/fa";
+import { formatPrice } from "@/app/utils/formatPrice";
 
 const CartClient = () => {
-  const { cartProducts, clearCart } = useCart();
+  const { cartProducts, clearCart, cartTotalAmount } = useCart();
 
   if (!cartProducts || cartProducts.length === 0) {
     return (
@@ -56,7 +57,7 @@ const CartClient = () => {
         <div className="text-sm flex flex-col gap-1 items-start">
           <p className="flex justify-between w-full text-base font-semibold">
             <span>Subtotal</span>
-            <span>$10000</span>
+            <span>{formatPrice(cartTotalAmount)}</span>
           </p>
           <p className="text-slate-400">
             El IVA se agrega cuando vayas a pagar
