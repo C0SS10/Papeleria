@@ -11,10 +11,14 @@ import { useRouter } from "next/navigation";
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const router = useRouter();
 
+  const handleRoute = () => {
+    router.push(`/product/${product.id}`);
+  };
+
   return (
     <article
       className="bg-white col-span-1 rounded-md border-4 border-pistachio-400 border-t-pistachio-600 border-r-pistachio-600 border-b-pistachio-400 border-l-pistachio-400 transition-transform hover:scale-105 text-center ease-in-out mt-2 shadow-lg cursor-pointer"
-      onClick={() => router.push(`/product/${product.id}`)}
+      onClick={handleRoute}
     >
       <div className="flex flex-col items-center w-full gap-2">
         <div className="aspect-square overflow-hidden relative w-full">
