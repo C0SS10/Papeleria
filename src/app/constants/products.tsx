@@ -22,7 +22,7 @@ export const products = [
     description: "Equipa tu computador con la última tecnología en monitores",
     price: 399000,
     discountPercentage: 44,
-    stock: 10,
+    stock: 5,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/483262-800-auto",
@@ -106,8 +106,7 @@ export const products = [
     description: "Reloj inteligente con forma ultra delgada",
     price: 169900,
     discountPercentage: 44,
-    stock: 12,
-
+    stock: 7,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/513659-800-auto",
@@ -140,8 +139,7 @@ export const products = [
     description: "Pequeño ventilador portátil USB",
     price: 49900,
     discountPercentage: 0,
-    stock: 20,
-
+    stock: 5,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/535868-800-auto",
@@ -205,8 +203,7 @@ export const products = [
     description: "Gran variedad de libros de la mejor calidad",
     price: 42000,
     discountPercentage: 0,
-    stock: 10,
-
+    stock: 6,
     category: "libros",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/477690-800-auto",
@@ -307,8 +304,7 @@ export const products = [
       "Lienzo con bastidor de 25 cm x 35 cm, ideal para que crees tus mejores obras de arte.",
     price: 16100,
     discountPercentage: 0,
-    stock: 20,
-
+    stock: 3,
     category: "arte",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/266422-800-auto",
@@ -322,8 +318,7 @@ export const products = [
     description: "Acrílico de 12 ml en colores primarios, trae 12 unidaes",
     price: 24400,
     discountPercentage: 30,
-    stock: 10,
-
+    stock: 2,
     category: "arte",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/444132-800-auto",
@@ -355,8 +350,7 @@ export const products = [
       "Este preciado Canson® Art Book™ es un compañero diario indispensable",
     price: 27200,
     discountPercentage: 30,
-    stock: 12,
-
+    stock: 9,
     category: "arte",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/356883-800-auto",
@@ -371,8 +365,7 @@ export const products = [
     description: "Silla gerencial London CS-5130",
     price: 559300,
     discountPercentage: 30,
-    stock: 10,
-
+    stock: 5,
     category: "muebles",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/326719-800-auto",
@@ -420,8 +413,7 @@ export const products = [
       "Encuentra gran variedad de artículos mobiliarios para tus labores en la casa o la oficina",
     price: 288400,
     discountPercentage: 10,
-    stock: 15,
-
+    stock: 7,
     category: "muebles",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/428114-800-auto",
@@ -455,8 +447,7 @@ export const products = [
     description: "Set de Smartwatch + audífonos Bluetooth Slide",
     price: 199900,
     discountPercentage: 45,
-    stock: 12,
-
+    stock: 6,
     category: "electronicos",
     thumbnail:
       "https://panamericana.vtexassets.com/arquivos/ids/377452-800-auto",
