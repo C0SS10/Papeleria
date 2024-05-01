@@ -97,7 +97,7 @@ export const CartContextProvider = (props: Props) => {
     (product: CartProductType) => {
       let updatedCart;
 
-      if (product.stock  > product.stock + 1) {
+      if (product.stock >= 10) {
         return toast.error(
           "No puedes añadir más productos de este tipo al carrito"
         );
