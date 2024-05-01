@@ -11,6 +11,7 @@ import { toast } from "react-hot-toast";
 type ContextType = {
   totalQuantity: number;
   cartProducts: CartProductType[] | null;
+  cartTotalAmount: number;
   addProduct: (product: CartProductType) => void;
   removeProduct: (product: CartProductType) => void;
   quantityIncrease: (product: CartProductType) => void;
@@ -25,16 +26,41 @@ interface Props {
 }
 
 export const CartContextProvider = (props: Props) => {
-  const [totalQuantity, setTotalQuantity] = useState(1);
+  const [totalQuantity, setTotalQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState<CartProductType[] | null>(
     null
   );
+  const [cartTotalAmount, setcartTotalAmount] = useState<number>(0);
 
   useEffect(() => {
     const cartItems: any = localStorage.getItem("cartItems");
     const cProducts: CartProductType[] | null = JSON.parse(cartItems);
     setCartProducts(cProducts);
   }, []);
+
+  useEffect(() => {
+    const getTotal = () => {
+      if (!cartProducts) {
+        return;
+      }
+
+      const {total, quantity} = cartProducts?.reduce(
+        (acc, item) => {
+          const itemTotal = item.price * item.stock;
+
+          acc.total += itemTotal;
+          acc.quantity += item.stock;
+
+          return acc;
+        },
+        { total: 0, quantity: 0 }
+      );
+      setTotalQuantity(quantity)
+      setcartTotalAmount(total);
+    };
+
+    getTotal();
+  }, [cartProducts]);
 
   const addProduct = useCallback((product: CartProductType) => {
     setCartProducts((prev) => {
@@ -71,7 +97,7 @@ export const CartContextProvider = (props: Props) => {
     (product: CartProductType) => {
       let updatedCart;
 
-      if (product.stock + 1 > product.maxStock) {
+      if (product.stock  > product.stock + 1) {
         return toast.error(
           "No puedes añadir más productos de este tipo al carrito"
         );
@@ -132,6 +158,7 @@ export const CartContextProvider = (props: Props) => {
   const value = {
     totalQuantity,
     cartProducts,
+    cartTotalAmount,
     addProduct,
     removeProduct,
     quantityIncrease,

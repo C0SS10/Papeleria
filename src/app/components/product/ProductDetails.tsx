@@ -10,6 +10,7 @@ import { ProductImages } from "@/app/components/product/ProductImages";
 import { useCart } from "@/app/hooks/useCart";
 import { MdArrowBack, MdCheckCircle } from "react-icons/md";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 interface ProductDetailsProps {
   product: any;
@@ -24,7 +25,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     title: product.title,
     price: product.price,
     stock: product.stock,
-    maxStock: product.maxStock,
     discountPercentage: product.discountPercentage,
     category: product.category,
     description: product.description,
@@ -44,22 +44,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
       }
     }
   }, [cartProducts, cartProduct, product.id]);
-
-  const quantityIncrease = useCallback(() => {
-    setCartProduct((prev) => {
-      const newStock = Math.min(prev.stock + 1, prev.maxStock);
-      const newQuantity = Math.max(newStock, 1);
-      return { ...prev, stock: newQuantity };
-    });
-  }, []);
-
-  const quantityDecrease = useCallback(() => {
-    setCartProduct((prev) => {
-      const newStock = Math.min(prev.stock - 1, prev.stock);
-      const newQuantity = Math.max(newStock, 1);
-      return { ...prev, stock: newQuantity };
-    });
-  }, []);
 
   const handleImage = useCallback((value: string) => {
     setCartProduct((prev) => {
@@ -108,11 +92,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           </span>
           <span className="text-xl font-semibold text-gray-500"> COP</span>
         </div>
-        <ProductQuantity
-          cartProduct={cartProduct}
-          quantityIncrease={quantityIncrease}
-          quantityDecrease={quantityDecrease}
-        />
         <div className="flex flex-col gap-2 md:flex-row justify-evenly">
           <button className="flex flex-row items-center gap-1 bg-pistachio-400 p-2 text-slate-200 rounded-md hover:bg-transparent hover:text-pistachio-400 border-2 border-pistachio-400 transition-colors ease-in">
             <MoneyIcon />

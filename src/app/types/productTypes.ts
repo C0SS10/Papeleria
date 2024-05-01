@@ -3,7 +3,6 @@ interface ProductData {
   title: string;
   price: number;
   stock: number;
-  maxStock: number;
   discountPercentage: number;
   category: string;
   thumbnail: string;
@@ -20,7 +19,6 @@ export type CartProductType ={
   title: string;
   price: number;
   stock: number;
-  maxStock: number;
   discountPercentage: number;
   category: string;
   description: string;
