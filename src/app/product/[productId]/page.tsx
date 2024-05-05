@@ -1,6 +1,6 @@
 import { Section } from "@/app/components/Section";
 import { ProductDetails } from "@/app/components/product/ProductDetails";
-import { products } from "@/app/constants/products";
+import { products } from "@/app/constants/Products";
 
 type productIdType = {
   productId?: number;
