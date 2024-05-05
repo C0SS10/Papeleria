@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Section } from "../Section";
 import Logo from "@/app/icons/HomeIcon";
 import CartCount from "./CartCount";
+import UserMenu from "./UserMenu";
 
 export default function Navbar() {
   return (
@@ -15,7 +16,7 @@ export default function Navbar() {
             <div className="hidden md:block">Busqueda</div>
             <nav className="flex items-center gap-8 md:gap-12">
               <CartCount />
-              <div>Menu</div>
+              <UserMenu />
             </nav>
           </div>
         </Section>
