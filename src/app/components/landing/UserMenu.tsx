@@ -7,8 +7,13 @@ import { FaUser } from "react-icons/fa";
 import MenuItem from "./MenuItem";
 import { signOut } from "next-auth/react";
 import BackDrop from "./BackDrop";
+import { SafeUser } from "@/app/types/userTypes";
 
-const UserMenu = () => {
+interface UserMenuProps {
+  currentUser: SafeUser | null;
+}
+
+const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
@@ -27,27 +32,31 @@ const UserMenu = () => {
         </div>
         {isOpen && (
           <nav className="absolute rounded-md shadow-md w-[160px] bg-white overflow-hidden right-0 top-12 text-sm flex flex-col cursor-pointer">
-            <div>
-              <Link href="/pedidos">
-                <MenuItem onClick={toggleOpen}>Pedidos</MenuItem>
-              </Link>
-              <MenuItem
-                onClick={() => {
-                  toggleOpen();
-                  signOut;
-                }}
-              >
-                Cerrar sesión
-              </MenuItem>
-            </div>
-            <div>
-              <Link href="/ingreso">
-                <MenuItem onClick={toggleOpen}>Ingresar</MenuItem>
-              </Link>
-              <Link href="/registro">
-                <MenuItem onClick={toggleOpen}>Registrar</MenuItem>
-              </Link>
-            </div>
+            {currentUser ? (
+              <div>
+                <Link href="/pedidos">
+                  <MenuItem onClick={toggleOpen}>Pedidos</MenuItem>
+                </Link>
+                <hr />
+                <MenuItem
+                  onClick={() => {
+                    toggleOpen();
+                    signOut;
+                  }}
+                >
+                  Cerrar sesión
+                </MenuItem>
+              </div>
+            ) : (
+              <div>
+                <Link href="/ingreso">
+                  <MenuItem onClick={toggleOpen}>Ingresar</MenuItem>
+                </Link>
+                <Link href="/registro">
+                  <MenuItem onClick={toggleOpen}>Registrar</MenuItem>
+                </Link>
+              </div>
+            )}
           </nav>
         )}
       </section>

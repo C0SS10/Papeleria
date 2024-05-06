@@ -6,6 +6,9 @@ import Input from "../components/inputs/Input";
 import { FcGoogle } from "react-icons/fc";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,10 +23,25 @@ const LoginForm = () => {
     },
   });
 
+  const router = useRouter();
+
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
-    console.log(data);
-    setIsLoading(false);
+    signIn("credentials", {
+      ...data,
+      redirect: false,
+    }).then((callback) => {
+      if (callback?.ok) {
+        router.push("/carrito");
+        router.refresh();
+        toast.success("¡Bienvenido!");
+      }
+
+      if (callback?.error) {
+        toast.error(callback.error);
+      }
+      setIsLoading(false);
+    });
   };
 
   return (
