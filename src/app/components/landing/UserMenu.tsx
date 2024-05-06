@@ -8,6 +8,7 @@ import MenuItem from "./MenuItem";
 import { signOut } from "next-auth/react";
 import BackDrop from "./BackDrop";
 import { SafeUser } from "@/app/types/userTypes";
+import Image from "next/image";
 
 interface UserMenuProps {
   currentUser: SafeUser | null;
@@ -27,7 +28,16 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           className="p-2 border border-pistachio-800 hover:shadow-[2px_2px] hover:shadow-yellow-400 flex flex-row items-center gap-1 rounded-md cursor-pointer shadow-md transition text-slate-200"
           onClick={toggleOpen}
         >
-          <FaUser />
+          {currentUser?.image ? (
+            <Image
+              src={currentUser?.image ?? ""}
+              fill
+              sizes="100"
+              alt="User Image"
+            />
+          ) : (
+            <FaUser />
+          )}
           <AiFillCaretDown />
         </div>
         {isOpen && (

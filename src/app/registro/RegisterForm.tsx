@@ -17,7 +17,7 @@ interface RegisterFormProps {
   currentUser: SafeUser | null;
 }
 
-const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
+const RegisterForm: React.FC<RegisterFormProps> = ({ currentUser }) => {
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
@@ -69,13 +69,13 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
   };
 
   if (currentUser) {
-    return(
+    return (
       <div className="flex flex-col items-center justify-center pt-4 gap-4 last:pt-12">
-        <AiFillAlert className="text-6xl text-red-600"/>
+        <AiFillAlert className="text-6xl text-red-600" />
         <h1 className="text-4xl font-semibold">Ya has iniciado sesión</h1>
         <h2 className="text-4xl font-semibold">Redireccionando...</h2>
       </div>
-    ) 
+    );
   }
 
   return (
@@ -115,7 +115,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
       </button>
       <button
         className="bg-transparent font-bold p-2 shadow-sm rounded-sm text-center text-xl w-full text-pistachio-400 hover:bg-pistachio-400 hover:text-slate-200 border-2 border-pistachio-400 transition-colors ease-in flex flex-row items-center justify-center gap-2"
-        onClick={handleSubmit(onSubmit)}
+        onClick={() => signIn("google")}
       >
         <FcGoogle />
         Registrate usando Google
