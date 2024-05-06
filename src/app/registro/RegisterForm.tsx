@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FieldValues, useForm, SubmitHandler } from "react-hook-form";
 import Input from "@/app/components/inputs/Input";
 import { RiAccountPinBoxFill } from "react-icons/ri";
@@ -10,8 +10,14 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { SafeUser } from "@/app/types/userTypes";
+import { AiFillAlert } from "react-icons/ai";
 
-const RegisterForm = () => {
+interface RegisterFormProps {
+  currentUser: SafeUser | null;
+}
+
+const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
@@ -26,6 +32,13 @@ const RegisterForm = () => {
   });
 
   const router = useRouter();
+
+  useEffect(() => {
+    if (currentUser) {
+      router.push("/");
+      router.refresh();
+    }
+  }, [currentUser, router]);
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
@@ -54,6 +67,16 @@ const RegisterForm = () => {
       })
       .finally(() => setIsLoading(false));
   };
+
+  if (currentUser) {
+    return(
+      <div className="flex flex-col items-center justify-center pt-4 gap-4 last:pt-12">
+        <AiFillAlert className="text-6xl text-red-600"/>
+        <h1 className="text-4xl font-semibold">Ya has iniciado sesión</h1>
+        <h2 className="text-4xl font-semibold">Redireccionando...</h2>
+      </div>
+    ) 
+  }
 
   return (
     <>

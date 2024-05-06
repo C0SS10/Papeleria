@@ -1,12 +1,14 @@
 import FormWrap from "@/app/components/FormWrap"
 import { Section } from "@/app/components/Section"
 import RegisterForm from "./RegisterForm"
+import { getCurrentUser } from "../../../actions/getCurrentUser";
 
-export default function Register(){ 
+export default async function Register(){
+  const user = await getCurrentUser();
   return(
     <Section>
       <FormWrap>
-        <RegisterForm />
+        <RegisterForm currentUser={user}/>
       </FormWrap>
     </Section>
   )

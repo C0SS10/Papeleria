@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Input from "../components/inputs/Input";
 import { FcGoogle } from "react-icons/fc";
@@ -9,8 +9,14 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { SafeUser } from "@/app/types/userTypes";
+import { AiFillAlert } from "react-icons/ai";
 
-const LoginForm = () => {
+interface LoginFormProps {
+  currentUser: SafeUser | null;
+}
+
+const LoginForm: React.FC<LoginFormProps> = ({currentUser}) => {
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
@@ -24,6 +30,13 @@ const LoginForm = () => {
   });
 
   const router = useRouter();
+
+  useEffect(() => {
+    if (currentUser) {
+      router.push("/");
+      router.refresh();
+    }
+  }, [currentUser, router]);
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
@@ -43,6 +56,16 @@ const LoginForm = () => {
       setIsLoading(false);
     });
   };
+
+  if (currentUser) {
+    return(
+      <div className="flex flex-col items-center justify-center pt-4 gap-4 last:pt-12">
+        <AiFillAlert className="text-6xl text-red-600"/>
+        <h1 className="text-4xl font-semibold">Ya has iniciado sesión</h1>
+        <h2 className="text-4xl font-semibold">Redireccionando...</h2>
+      </div>
+    ) 
+  }
 
   return (
     <>
