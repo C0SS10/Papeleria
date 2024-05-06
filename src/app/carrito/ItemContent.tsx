@@ -6,7 +6,7 @@ import Link from "next/link";
 import { truncateText } from "@/app/utils/truncateText";
 import Image from "next/image";
 import { ProductQuantity } from "@/app/components/product/ProductQuantity";
-import { useCart } from "@/app/hooks/useCart";
+import { useCart } from "../../../hooks/useCart";
 
 interface ItemContentProps {
   item: CartProductType;

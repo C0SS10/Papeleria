@@ -1,6 +1,6 @@
 "use client";
 
-import { useCart } from "@/app/hooks/useCart";
+import { useCart } from "../../../../hooks/useCart";
 import { useRouter } from "next/navigation";
 import { CiShoppingCart } from "react-icons/ci";
 

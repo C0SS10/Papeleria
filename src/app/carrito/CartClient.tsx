@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCart } from "@/app/hooks/useCart";
+import { useCart } from "../../../hooks/useCart";
 import { MdArrowBack } from "react-icons/md";
 import ItemContent from "./ItemContent";
 import { FaShoppingCart } from "react-icons/fa";
