@@ -12,6 +12,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { SafeUser } from "@/app/types/userTypes";
 import { AiFillAlert } from "react-icons/ai";
+import { validateRegistration } from "@/app/utils/validatorRegister";
 
 interface RegisterFormProps {
   currentUser: SafeUser | null;
@@ -42,6 +43,15 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ currentUser }) => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
+
+    const { email, password } = data;
+
+    if (!validateRegistration(email, password)) {
+      toast.error("Correo electrónico o contraseña inválidos");
+      setIsLoading(false)
+      return;
+    }
+
     axios
       .post("/api/registro", data)
       .then((response) => {

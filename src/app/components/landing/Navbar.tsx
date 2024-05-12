@@ -7,7 +7,6 @@ import { getCurrentUser } from "../../../../actions/getCurrentUser";
 
 export default async function Navbar() {
   const user = await getCurrentUser();
-  console.log(user);
 
   return (
     <section className="sticky top-0 w-full bg-pistachio-400 z-50 shadow-md border-pistachio-900 border-b-2">
