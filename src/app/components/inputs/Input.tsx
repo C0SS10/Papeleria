@@ -64,4 +64,3 @@ const Input: React.FC<InputProps> = ({
 };
 
 export default Input;
-//text-gray-500 hover:text-pistachio-700 cursor-pointer text-xl
