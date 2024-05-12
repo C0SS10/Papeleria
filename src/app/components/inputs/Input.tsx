@@ -1,6 +1,9 @@
 "use client";
 
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
+import PasswordInfo from "./PasswordInfo";
+import { FaInfoCircle } from "react-icons/fa";
+import { useState } from "react";
 
 interface InputProps {
   id: string;
@@ -21,6 +24,12 @@ const Input: React.FC<InputProps> = ({
   register,
   errors,
 }) => {
+  const [showPasswordInfo, setShowPasswordInfo] = useState(false);
+
+  const togglePasswordInfo = () => {
+    setShowPasswordInfo(!showPasswordInfo);
+  };
+
   return (
     <div className="w-full relative">
       <input
@@ -41,8 +50,18 @@ const Input: React.FC<InputProps> = ({
       >
         {label}
       </label>
+      {id === 'password' && (
+        <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+          <FaInfoCircle
+            className="text-gray-500 hover:text-pistachio-700 cursor-pointer text-xl"
+            onClick={togglePasswordInfo}
+          />
+          {showPasswordInfo && <PasswordInfo onClose={togglePasswordInfo} />}
+        </div>
+      )}
     </div>
   );
 };
 
 export default Input;
+//text-gray-500 hover:text-pistachio-700 cursor-pointer text-xl
