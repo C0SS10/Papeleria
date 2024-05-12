@@ -16,7 +16,6 @@ export default async function Navbar() {
             <Link href="/">
               <Logo />
             </Link>
-            <div className="hidden md:block">Busqueda</div>
             <nav className="flex items-center gap-8 md:gap-12">
               <CartCount />
               <UserMenu currentUser={user}/>
