@@ -18,7 +18,7 @@ export default function Footer() {
                 {item.href ? (
                   <a
                     key={index}
-                    href={`${item.href}${item.text}`}
+                    href={`${item.href}`}
                     className="hover:underline text-base"
                   >
                     {item.text}

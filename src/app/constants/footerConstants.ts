@@ -9,6 +9,7 @@ export const contactList: ListType[] = [
   { text: "Tiendavirtual@panamericana.com.co", href: "mailto:" },
   { text: "Servicliente@panamericana.com.co", href: "mailto:" },
   { text: "Calle 12 #34-30, Bogotá D.C." },
+  { text: "Quejas y reclamos", href: "/contactenos" },
 ];
 
 export const aboutList: ListType[] = [
