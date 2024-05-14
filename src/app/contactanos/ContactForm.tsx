@@ -164,6 +164,7 @@ const ContactForm = ({}) => {
         <select
           id="ciudad"
           name="ciudad"
+          autoComplete="off"
           onChange={handleChange}
           required
           className={`peer w-full p-4 pt-6 outline-none bg-white font-medium border-2 rounded-md transition border-slate-200 focus:border-pistachio-400 ${
