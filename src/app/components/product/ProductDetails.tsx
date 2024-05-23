@@ -5,12 +5,10 @@ import MoneyIcon from "@/app/icons/MoneyIcon";
 import PlusCartIcon from "@/app/icons/PlusCartIcon";
 import { formatPrice } from "@/app/utils/formatPrice";
 import { CartProductType } from "@/app/types/productTypes";
-import { ProductQuantity } from "@/app/components/product/ProductQuantity";
 import { ProductImages } from "@/app/components/product/ProductImages";
 import { useCart } from "../../../../hooks/useCart";
 import { MdArrowBack, MdCheckCircle } from "react-icons/md";
 import Link from "next/link";
-import toast from "react-hot-toast";
 
 interface ProductDetailsProps {
   product: any;

@@ -4,7 +4,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'panamericana.vtexassets.com'
+        hostname: 'panamericana.vtexassets.com',
+      }, {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
       }
     ]
   }
