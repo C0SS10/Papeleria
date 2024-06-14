@@ -26,5 +26,3 @@ npm install
 ```powershell
 npm run dev
 ```
-
-Firma
